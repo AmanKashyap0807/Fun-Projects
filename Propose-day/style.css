@@ -39,7 +39,7 @@ h1 {
 #no-button {
     position: absolute;
     left: 54%;
-    transition: all 0s ease;
+    /* transition: all 0s ease; */
 }
 
 #yes-button {
