@@ -18,9 +18,14 @@ h1 {
     font-style: normal;
 }
 
-/* 
 #btn {
-    height: 100px;
-    width: 100px;
-    background-color: #ff41f7;
-} */
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#button {
+    font-family: "love ya like a sister";
+    border: 2px solid black";
+
+}
