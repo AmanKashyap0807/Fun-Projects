@@ -26,6 +26,8 @@ h1 {
 
 #button {
     font-family: "love ya like a sister";
-    border: 2px solid black";
+    border: 2.5px solid black;
+    box-shadow: 2px 2px 7px black;
+    
 
 }
