@@ -29,3 +29,64 @@ document.getElementById('no-button').addEventListener('click', function () {
     const randomMessage = messages[Math.floor(Math.random() * messages.length)];
     document.querySelector('h1').textContent = randomMessage;
 });
+
+document.getElementById('yes-button').addEventListener('click', function () {
+    // Get elements
+    const mainContent = document.getElementById('main');
+    const messageContent = document.getElementById('showMessage');
+
+    // Hide main content
+    mainContent.style.display = 'none';
+
+    // Show message content
+    messageContent.style.display = 'block';
+
+    // Change background
+    document.body.style.background = 'linear-gradient(116.82deg, #ff94e7 0%, #27cbff 100%)';
+
+    // Setup animation
+    const textWrapper = document.querySelector('.ml6 .letters');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    // Run animation
+    anime.timeline({ loop: true })
+        .add({
+            targets: '.ml6 .letter',
+            translateY: ["1.1em", 0],
+            translateZ: 0,
+            duration: 750,
+            delay: (el, i) => 50 * i
+        })
+        .add({
+            targets: '.ml6',
+            opacity: [1, 0],
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 1000
+        });
+});
+// const propose = () => {
+//     parentElement.style.display = "none";
+//     showMessage.style.display = "block";
+//     changeColor.background = "linear-gradient(116.82deg, #ff94e7 0%, #27cbff 100%)";
+// };
+
+// // Animate Text with Anim JS
+// var textWrapper = document.querySelector(".ml6 .letters");
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+// anime.timeline({ loop: true })
+//     .add({
+//         targets: ".ml6 .letter",
+//         translateY: ["1.1em", 0],
+//         translateZ: 0,
+//         duration: 750,
+//         delay: (el, i) => 50 * i,
+//     })
+//     .add({
+//         targets: ".ml6",
+//         opacity: 0,
+//         duration: 1000,
+//         easing: "easeOutExpo",
+//         delay: 1000,
+//     });
